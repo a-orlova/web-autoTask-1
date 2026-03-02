@@ -2,7 +2,7 @@ import http from 'node:http'
 
 const PORT = process.env.PORT || 1000
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     res.statusCode = 200
     res.setHeader('X-Author', 'alenaorlova')
     res.setHeader('Access-Control-Allow-Origin', '*')
