@@ -11,13 +11,13 @@ const server = http.createServer((req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*')
         res.end('alenaorlova')
 
-    } else if(req.url.startsWith('/sampl/') && req.method === 'GET') {
+    } else if(req.url.startsWith('/sample/') && req.method === 'GET') {
 
         res.statusCode = 200
         res.setHeader('Content-Type', 'text/plain')
         res.setHeader('Access-Control-Allow-Origin', '*')
         res.end(`function task(x) { return x * this * this }`)
-        
+
     } else {
         res.statusCode = 404
         res.end('Not found')
